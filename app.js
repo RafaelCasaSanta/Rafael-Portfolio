@@ -37,8 +37,8 @@ particlesJS(
                 },
                 image: {
                     src: "img/github.svg",
-                    width: 100,
-                    height: 100,
+                    width: 200,
+                    height: 200,
                 },
             },
             opacity: {
@@ -63,14 +63,14 @@ particlesJS(
             },
             line_linked: {
                 enable: true,
-                distance: 250,
+                distance: 90,
                 color: "#ffffff",
                 opacity: 0.4,
                 width: 1,
             },
             move: {
                 enable: true,
-                speed: 6,
+                speed: 2,
                 direction: "none",
                 random: false,
                 straight: false,
