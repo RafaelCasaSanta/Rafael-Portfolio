@@ -16,13 +16,18 @@
 <body>
     <div id="particles-js">
         <div class="nav-bar">
-            <nav>
-                <a href="index.html">Home</a>
-                <a href="about.html">About</a>
-                <a href="#portfolio">Skills</a>
-                <a href="#contact">Contact</a>
-            </nav>
+            <header>
+                <nav class="nav-content">
+                    <div class="links">
+                        <a href="index.html">Home</a>
+                        <a href="#about">Sobre</a>
+                        <a href="#skills">Skills</a>
+                        <a href="#contact">Contact</a>
+                    </div>
+                </nav>
+            </header>
         </div>
+
         <div class="container">
             <div class="card">
                 <div class="imageBox">
@@ -46,14 +51,106 @@
                     </div>
                 </div>
             </div>
-            
-            <div class="footer">
-                <footer class="footer-info">
-                    <p>&copy; 2023 Rafael Casa Santa Pierote. All rights reserved.</p>
-                </footer>
-            </div>
         </div>
+        
+        <section id="about" class="about">
+            <div class="about-content">
+                <div class="left-content">
+                    <img src="assets/computer-wallpaper.jpg">
+                </div>
+
+                <div class="about-description">
+                    <h2>Sobre</h2>
+                    <p>Olá, sou Rafael, desenvolvedor de software full stack. Gosto muito de criar novas
+                        soluções inovadoras e ágeis que possam agregar para a tecnologia. Possuo
+                        conhecimento sólido em PHP, Laravel, JavaScript, React, TypeScript, HTML, CSS,
+                        Docker e Git. Tenho comprometimento em desenvolver soluções de qualidade.
+                        Também possuo habilidades em MySQL, AdonisJS, Node.js, Bootstrap e Ant Design.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="skills">
+            <div class="skills-content">
+                <div class="card-terminal">
+                    <div class="tools">
+                        <div class="circle">
+                            <span class="red box"></span>
+                        </div>
+                    <div class="circle">
+                        <span class="yellow box"></span>
+                    </div>
+                    <div class="circle">
+                        <span class="green box"></span>
+                    </div>
+                </div>
+                    <div class="card__content">
+                    </div>
+                </div>
+                <div class="card-terminal">
+                    <div class="tools">
+                        <div class="circle">
+                            <span class="red box"></span>
+                        </div>
+                    <div class="circle">
+                        <span class="yellow box"></span>
+                    </div>
+                    <div class="circle">
+                        <span class="green box"></span>
+                    </div>
+                </div>
+                    <div class="card__content">
+                    </div>
+                </div>
+                <div class="card-terminal">
+                    <div class="tools">
+                        <div class="circle">
+                            <span class="red box"></span>
+                        </div>
+                    <div class="circle">
+                        <span class="yellow box"></span>
+                    </div>
+                    <div class="circle">
+                        <span class="green box"></span>
+                    </div>
+                </div>
+                    <div class="card__content">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- <div class="footer">
+            <footer class="footer-info">
+                <p>&copy; 2023 Rafael Casa Santa Pierote. All rights reserved.</p>
+            </footer>
+        </div> -->
 <script type="text/javascript" src="particles.js" ></script>
 <script type="text/javascript" src="app.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('.links a');
+
+        navLinks.forEach(link => {
+            link.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                const targetId = this.getAttribute('href').substring(1);
+                const targetSection = document.getElementById(targetId);
+
+                window.scrollTo({
+                    top: targetSection.offsetTop - 50, // Ajuste para acomodar a barra de navegação
+                    behavior: 'smooth'
+                });
+
+                // Adicione/remova a classe ativa conforme necessário
+                navLinks.forEach(navLink => navLink.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+    });
+</script>
 </body>
 </html>
