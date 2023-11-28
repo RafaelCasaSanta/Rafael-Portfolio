@@ -27,7 +27,6 @@
                 </nav>
             </header>
         </div>
-    <main>
         <div class="container">
             <div class="card">
                 <div class="imageBox">
@@ -51,71 +50,14 @@
                     </div>
                 </div>
             </div>
-        </div>
-        
-        <section id="about" class="about">
-            <div class="about-content">
-                <div class="left-content">
-                    <img src="assets/profile.jpeg">
-                </div>
-
-                <div class="about-description">
-                    <h2>Sobre</h2>
-                    <div id="log"></div>
-                    <div class="text-center m-top-50">
-                        <button>
-                            <a href="assets/Rafael_CV_Desenvolvedor_Fullstack.pdf" class="btn2"><span class="spn2">Download CV</span></a>
-                        </button>
-                    </div>
-
-                </div>
+            
+            <div class="footer">
+                <footer class="footer-info">
+                    <p>&copy; 2023 Rafael Casa Santa Pierote. All rights reserved.</p>
+                </footer>
             </div>
-        </section>
-    </main>
-
-    <footer class="footer">
-        <p class="footer__copy">&copy; 2023 Rafael Casa Santa Pierote. All rights reserved.</p>
-    </footer>
-
+        </div>
 <script type="text/javascript" src="particles.js" ></script>
 <script type="text/javascript" src="app.js"></script>
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const sections = document.querySelectorAll('section');
-        const navLinks = document.querySelectorAll('.links a');
-
-        navLinks.forEach(link => {
-            link.addEventListener('click', function (e) {
-                e.preventDefault();
-
-                const targetId = this.getAttribute('href').substring(1);
-                const targetSection = document.getElementById(targetId);
-
-                window.scrollTo({
-                    top: targetSection.offsetTop - 50, // Ajuste para acomodar a barra de navegação
-                    behavior: 'smooth'
-                });
-
-                // Adicione/remova a classe ativa conforme necessário
-                navLinks.forEach(navLink => navLink.classList.remove('active'));
-                this.classList.add('active');
-            });
-        });
-    });
-
-    var div = document.getElementById('log');
-    var texto = 'Olá, sou Rafael, desenvolvedor de software full stack. Gosto muito de criar novas soluções inovadoras e ágeis que possam agregar para a tecnologia. Possuo conhecimento sólido em PHP, Laravel, JavaScript, React, TypeScript, HTML, CSS, Docker e Git. Tenho comprometimento em desenvolver soluções de qualidade. Também possuo habilidades em MySQL, AdonisJS, Node.js, Bootstrap e Ant Design.';
-
-    function escrever(str, el) {
-    var char = str.split('').reverse();
-    var typer = setInterval(function() {
-        if (!char.length) return clearInterval(typer);
-        var next = char.pop();
-        el.innerHTML += next;
-    }, 20);
-    }
-
-escrever(texto, div);
-</script>
 </body>
 </html>
