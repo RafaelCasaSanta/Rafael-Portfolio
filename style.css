@@ -29,8 +29,15 @@ body {
     color: #fff;
 }
 
+.left-content {
+    display: flex;
+    justify-content: center;
+}
+
 .left-content img {
-    max-width: 500px;
+    max-width: 50%;
+    height: 80%;
+    border-radius: 20%;
 }
 
 .about-content {
@@ -264,7 +271,7 @@ nav a:hover {
     left: -2px;
     width: calc(100% + 4px);
     height: calc(100% - -2px);
-    background-color: #7f72a2;
+    background-color: #333233;
     transition: 0.3s ease-out;
     transform: scaleY(1);
 }
@@ -276,7 +283,7 @@ nav a:hover {
     left: -2px;
     width: calc(100% + 4px);
     height: calc(100% - 50px);
-    background-color: #7f72a2;
+    background-color: #333233;
     transition: 0.3s ease-out;
     transform: scaleY(1);
 }
@@ -313,13 +320,28 @@ button {
 }
 
 .footer {
-    background: #333233;
+    background-color: #333233;
     color: #fff;
-    display: flex;
     text-align: center;
-    align-items: center;
-    position: relative;
-    z-index: 3;
-    top: 44em;
-    justify-content: center;
+    font-weight: 500;
+    padding: 2rem 0;
+}
+
+.footer__title {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.footer__social {
+    margin-bottom: 2rem;
+}
+
+.footer__icon {
+    font-size: 1.5rem;
+    color: #fff;
+    margin: 0 1rem;
+}
+
+.footer__copy {
+    font-size: 0.75rem;
 }
