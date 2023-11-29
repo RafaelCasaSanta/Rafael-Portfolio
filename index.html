@@ -57,7 +57,42 @@
                 </footer>
             </div>
         </div>
+
+            <section id="about" class="about">
+                <div class="about-content">
+                    <div class="left-content">
+                        <img src="assets/profile.jpeg">
+                    </div>
+                    
+                    <div class="about-description">
+                        <h2>Sobre</h2>
+                        <div id="about-info"></div>
+                    </div>
+                </div>
+            </section>
+            
+
+            <div class="footer">
+                <footer class="footer-info">
+                    <p>&copy; 2023 Rafael Casa Santa Pierote. All rights reserved.</p>
+                </footer>
+            </div>
 <script type="text/javascript" src="particles.js" ></script>
 <script type="text/javascript" src="app.js"></script>
+<script>
+    var div = document.getElementById('about-info');
+    var text = 'Olá, sou Rafael, desenvolvedor de software full stack. Gosto muito de criar novas soluções inovadoras e ágeis que possam agregar para a tecnologia. Possuo conhecimento sólido em PHP, Laravel, JavaScript, React, TypeScript, HTML, CSS, Docker e Git. Tenho comprometimento em desenvolver soluções de qualidade. Também possuo habilidades em MySQL, AdonisJS, Node.js, Bootstrap e Ant Design.';
+
+    function write(str, el) {
+    var char = str.split('').reverse();
+    var typer = setInterval(function() {
+        if (!char.length) return clearInterval(typer);
+        var next = char.pop();
+        el.innerHTML += next;
+    }, 40);
+    }
+
+    write(text, div);
+</script>
 </body>
 </html>
