@@ -18,9 +18,72 @@ body {
     padding: 0;
 }
 
+.line {
+    position: absolute;
+    width: 0px;
+    margin: auto;
+    border-right: 2px solid rgba(255, 255, 255, 0.75);
+    font-size: 180%;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+}
+/*Animação*/
+.anim-typewriter {
+    animation: typewriter 10s steps(20) 500ms infinite,
+        blinkTextCursor 500ms steps(20) infinite normal;
+}
+@keyframes typewriter {
+    0% {
+        width: 0px;
+    }
+    10% {
+        width: 0px;
+    }
+    25% {
+        width: 400px;
+    }
+    75% {
+        width: 400px;
+    }
+    90% {
+        width: 0px;
+    }
+    100% {
+        width: 0px;
+    }
+}
+@keyframes blinkTextCursor {
+    from {
+        border-right-color: rgba(255, 255, 255, 0.75);
+    }
+    to {
+        border-right-color: transparent;
+    }
+}
+
 .nav-content {
+    width: 100%;
     display: flex;
+    position: fixed;
     justify-content: center;
+    gap: 50px;
+    border-bottom: 1px solid #ccc;
+}
+
+.nav-content div {
+    flex: 2;
+}
+
+.name {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.links {
+    display: flex;
+    justify-content: end;
 }
 
 .about {
