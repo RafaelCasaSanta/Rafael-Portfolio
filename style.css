@@ -64,11 +64,13 @@ body {
 
 .nav-content {
     width: 100%;
+    background: #333233;
     display: flex;
     position: fixed;
     justify-content: center;
     gap: 50px;
     border-bottom: 1px solid #ccc;
+    z-index: 1;
 }
 
 .nav-content div {
@@ -87,9 +89,13 @@ body {
 }
 
 .about {
+    width: 100%;
+    height: 100%;
     background: #333233;
     overflow: hidden;
     color: #fff;
+    padding: 10px;
+    border-bottom: 1px solid;
 }
 
 .left-content {
@@ -99,7 +105,7 @@ body {
 
 .left-content img {
     max-width: 50%;
-    height: 80%;
+    height: 100%;
     border-radius: 20%;
 }
 
@@ -108,22 +114,11 @@ body {
     align-items: center;
     justify-content: center;
     gap: 14px;
+    padding: 10px;
 }
 
 .about-content div {
     flex: 1;
-}
-
-.skills {
-    padding-top: 10px;
-    background: #333233;
-    overflow: hidden;
-    color: #fff;
-}
-
-.skills-content {
-    display: flex;
-    justify-content: space-between;
 }
 
 .card-terminal {
@@ -325,6 +320,7 @@ nav a:hover {
     font-size: 20px;
     transition: 0.3s;
     margin-top: 20px;
+    z-index: 0;
 }
 
 .btn2::before {
