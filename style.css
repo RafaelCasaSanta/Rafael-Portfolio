@@ -110,6 +110,7 @@ body {
 }
 
 .about-content {
+    height: 700px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -363,4 +364,68 @@ button {
 
 .footer__copy {
     font-size: 0.75rem;
+}
+
+.contact {
+    background: #333233;
+}
+
+.contact-button {
+    display: flex;
+    position: absolute;
+    display: inline-block;
+    padding: 15px 30px;
+    border: 2px solid #fefefe;
+    text-transform: uppercase;
+    color: #fefefe;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 20px;
+    transition: 0.3s;
+    margin-top: 20px;
+    z-index: 0;
+}
+
+.contact-button::before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    width: calc(100% + 4px);
+    height: calc(100% - -2px);
+    background-color: #333233;
+    transition: 0.3s ease-out;
+    transform: scaleY(1);
+}
+
+.contact-button::after {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    width: calc(100% + 4px);
+    height: calc(100% - 50px);
+    background-color: #333233;
+    transition: 0.3s ease-out;
+    transform: scaleY(1);
+}
+
+.contact-button:hover::before {
+    transform: translateY(-25px);
+    height: 0;
+}
+
+.contact-button:hover::after {
+    transform: scaleX(0);
+    transition-delay: 0.15s;
+}
+
+.contact-button:hover {
+    color: #fefefe;
+    border: 2px solid #fefefe;
+}
+
+.contact-button span {
+    position: relative;
+    z-index: 3;
 }
